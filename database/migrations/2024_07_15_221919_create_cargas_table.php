@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('seccion', 3);
             $table->string('grupo', 1);
             $table->string('horario', 150);
+            $table->integer('id_carga');
             $table->timestamps();
         });
     }

@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-
-use App\Models\Carrera;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CarreraSeeder extends Seeder
+class GrupoIngresanteSeeder extends Seeder
 {
     /**
      * Run the database seeds.
