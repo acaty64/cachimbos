@@ -11,3 +11,7 @@ Route::get('/', function () {
 Route::get('/ingresantes', function () {
     return view('app.ingresantes');
 });
+
+Route::get('/grupos', function () {
+    return view('app.grupos');
+});

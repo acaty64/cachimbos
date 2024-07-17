@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('car', 4) ;
             $table->string('sd', 3) ;
             $table->integer('grupo') ;
+            $table->integer('cantidad') ;
             $table->timestamps();
         });
     }
