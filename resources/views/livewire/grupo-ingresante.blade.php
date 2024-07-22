@@ -38,7 +38,7 @@
                                 <td>{{$ingresante->fac}}</td>
                                 <td>{{$ingresante->car}}</td>
                                 <td>{{$ingresante->mod}}</td>
-                                <td>{{$ingresante->turno}}</td>
+                                <td>{{$ingresante->turno->turno}}</td>
                                 <td>{{$ingresante->sd}}</td>
                                 <td>{{$ingresante->grupo}}</td>
                                 <td>
