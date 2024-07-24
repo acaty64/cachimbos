@@ -30,17 +30,17 @@
                             <th></th>
                         </thead>
                         <tbody>
-                            @foreach ($ingresantes as $ingresante)
+                            @foreach ($incomings as $incoming)
                             <tr>
-                                <td>{{$ingresante->id}}</td>
-                                <td>{{$ingresante->alumno}}</td>
-                                <td>{{$ingresante->alumno_nombres}}</td>
-                                <td>{{$ingresante->fac}}</td>
-                                <td>{{$ingresante->car}}</td>
-                                <td>{{$ingresante->mod}}</td>
-                                <td>{{$ingresante->turno->turno}}</td>
-                                <td>{{$ingresante->sd}}</td>
-                                <td>{{$ingresante->grupo}}</td>
+                                <td>{{$incoming->id}}</td>
+                                <td>{{$incoming->alumno}}</td>
+                                <td>{{$incoming->alumno_nombres}}</td>
+                                <td>{{$incoming->fac}}</td>
+                                <td>{{$incoming->car}}</td>
+                                <td>{{$incoming->mod}}</td>
+                                <td>{{$incoming->turno->turno}}</td>
+                                <td>{{$incoming->sd}}</td>
+                                <td>{{$incoming->group}}</td>
                                 <td>
                                     {{-- @can('admin.document.edit')
                                     <a id="btnEdit{{ $document->id }}" class='btn btn-primary me-md-2' wire:click="setStatus('edit', {{ $document->id }})">Editar</a>
@@ -53,7 +53,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="px-6 py-3">{{ $ingresantes->links() }}</div>
+                    <div class="px-6 py-3">{{ $incomings->links() }}</div>
                 </div>
             @endif
 

@@ -15,9 +15,9 @@ class Groups extends Component
     {
 
 
-        $grupos = DB::table('ingresantes')
-            ->join('incomings', 'incomings.postulante', '=', 'incomings.postulante')
-            ->leftjoin('group_incoming', 'ingresantes.id', '=', 'grupo_ingresante.ingresante_id')
+        $groups = DB::table('incomings')
+            ->join('postulants', 'incomings.postulante', '=', 'postulants.postulante')
+            ->leftjoin('group_incoming', 'incomings.id', '=', 'group_incoming.incoming_id')
             ->select('incomings.sd',
                         'incomings.fac',
                         'incomings.car',
@@ -28,6 +28,6 @@ class Groups extends Component
             ->orderBy('fac', 'asc')
             ->orderBy('car', 'asc')
             ->paginate(15);
-        return view('livewire.grupos',['grupos' => $grupos]);
+        return view('livewire.groups',['groups' => $groups]);
     }
 }

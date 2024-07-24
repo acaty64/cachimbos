@@ -10,8 +10,8 @@ class Group extends Model
     use HasFactory;
 
     protected $fillable = ['sd', 'fac', 'car', 'turno', 'grupo', 'cantidad'];
-    public function ingresantes()
+    public function incomings()
     {
-        return $this->belongsToMany('App\Models\Ingresantes');
+        return $this->belongsToMany('App\Models\Incomings');
     }
 }

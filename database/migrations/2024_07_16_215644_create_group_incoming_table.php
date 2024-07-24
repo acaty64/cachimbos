@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('group_incoming', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('grupo_id')->constrained();
-            $table->foreignId('ingresante_id')->constrained();
+            $table->foreignId('group_id')->constrained();
+            $table->foreignId('incoming_id')->constrained();
             $table->timestamps();
         });
     }

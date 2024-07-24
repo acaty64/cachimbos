@@ -19,11 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Master',
             'email' => 'master@example.com',
         ]);
-        $this->call(CargaSeeder::class);
-        $this->call(FacultadSeeder::class);
+        $this->call(ChargeSeeder::class);
+        $this->call(FacultySeeder::class);
         $this->call(PlanSeeder::class);
-        $this->call(PostulanteSeeder::class);
-        $this->call(IngresanteSeeder::class);
+        $this->call(PostulantSeeder::class);
+        $this->call(IncomingSeeder::class);
         // $this->call(CarreraSeeder::class);
     }
 }

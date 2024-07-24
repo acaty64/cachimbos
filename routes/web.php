@@ -8,10 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ingresantes', function () {
-    return view('app.ingresantes');
+Route::get('/incomings', function () {
+    return view('app.incomings');
 });
 
-Route::get('/grupos', function () {
-    return view('app.grupos');
+Route::get('/groups', function () {
+    return view('app.groups');
 });

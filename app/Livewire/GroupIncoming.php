@@ -13,8 +13,8 @@ class GroupIncoming extends Component
     public function render()
     {
     
-        return view('livewire.grupo-ingresante', [
-            'ingresantes' => Incoming::orderBy('alumno_nombres', 'ASC')->paginate(15)
+        return view('livewire.group-incoming', [
+            'incomings' => Incoming::orderBy('alumno_nombres', 'ASC')->paginate(15)
         ]);
     
     }

@@ -26,14 +26,14 @@
                             <th></th>
                         </thead>
                         <tbody>
-                            @foreach ($grupos as $grupo)
+                            @foreach ($groups as $group)
                             <tr>
-                                <td>{{$grupo->sd}}</td>
-                                <td>{{$grupo->fac}}</td>
-                                <td>{{$grupo->car}}</td>
-                                <td>{{$grupo->turno}}</td>
-                                <td>{{$grupo->cantidad}}</td>
-                                {{-- <td>{{$grupo->grupo}}</td> --}}
+                                <td>{{$group->sd}}</td>
+                                <td>{{$group->fac}}</td>
+                                <td>{{$group->car}}</td>
+                                <td>{{$group->turno}}</td>
+                                <td>{{$group->cantidad}}</td>
+                                {{-- <td>{{$group->group}}</td> --}}
                                 <td>
                                     {{-- @can('admin.document.edit')
                                     <a id="btnEdit{{ $document->id }}" class='btn btn-primary me-md-2' wire:click="setStatus('edit', {{ $document->id }})">Editar</a>
@@ -46,7 +46,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="px-6 py-3">{{ $grupos->links() }}</div>
+                    <div class="px-6 py-3">{{ $groups->links() }}</div>
                 </div>
             @endif
 
