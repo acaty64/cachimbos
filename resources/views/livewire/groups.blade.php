@@ -22,8 +22,8 @@
                             <th>Car</th>
                             <th>Turno</th>
                             <th>Cantidad</th>
-                            <th>Grupo</th>
-                            <th></th>
+                            <th>Límite</th>
+                            <th>Acción</th>
                         </thead>
                         <tbody>
                             @foreach ($groups as $group)
@@ -31,7 +31,7 @@
                                 <td>{{$group->sd}}</td>
                                 <td>{{$group->fac}}</td>
                                 <td>{{$group->car}}</td>
-                                <td>{{$group->turno}}</td>
+                                <td>{{substr($group->turno,0,1)}}</td>
                                 <td>{{$group->cantidad}}</td>
                                 {{-- <td>{{$group->group}}</td> --}}
                                 <td>

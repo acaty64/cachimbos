@@ -8,8 +8,8 @@ use Livewire\WithPagination;
 
 class Groups extends Component
 {
-
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $status = 'index';
     public function render()
     {
@@ -27,7 +27,7 @@ class Groups extends Component
             ->orderBy('sd', 'asc')
             ->orderBy('fac', 'asc')
             ->orderBy('car', 'asc')
-            ->paginate(15);
+            ->paginate(10);
         return view('livewire.groups',['groups' => $groups]);
     }
 }

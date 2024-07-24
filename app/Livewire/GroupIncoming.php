@@ -9,12 +9,13 @@ use Livewire\WithPagination;
 class GroupIncoming extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $status = "index";
     public function render()
     {
     
         return view('livewire.group-incoming', [
-            'incomings' => Incoming::orderBy('alumno_nombres', 'ASC')->paginate(15)
+            'incomings' => Incoming::orderBy('alumno_nombres', 'ASC')->paginate(10)
         ]);
     
     }
