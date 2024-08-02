@@ -28,26 +28,30 @@ class Charge extends Model
 
     use HasFactory;
 
-    public function horas() {
+    public function hours() {
         // MAR 08:30-10:00 - MAR 10:15-11:45 - MAR 12:00-13:30
         // DDD hh:mm-HH:MM - DDD hh:mm-HH:MM - DDD hh:mm-HH:MM
         // 123456789012345
         $ncaracter = 0;
-        $hora = []; 
+        $hours = []; 
         $qhoras = round(strlen($this->horario)/15,0);
         for ($i=0; $i < $qhoras; $i++) { 
             $texto = substr($this->horario, ($i * 15) + ($i * 3) , 15);
             $dd = substr($texto, 0, 3);
             $h1 = substr($texto, 4, 5);
             $h2 = substr($texto, 10, 5);
-            $hora[] = [
+            $hours[] = [
                 'dia' => $dd,
                 'hora_i' => $h1,
                 'hora_f' => $h2
             ];
 
         }
-
-        return $hora;
+        return $hours;
     }
+
+
+
+
+
 }

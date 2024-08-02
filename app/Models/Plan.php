@@ -10,4 +10,8 @@ class Plan extends Model
     use HasFactory;
 
     protected $fillable = ['carrera', 'plan', 'tc', 'curso', 'descripcion', 'cred', 'ht', 'hp'];
+
+
+
+
 }
