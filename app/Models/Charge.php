@@ -50,7 +50,9 @@ class Charge extends Model
         return $hours;
     }
 
-
+    public static function find_id_carga($id_carga){
+        return Charge::where('id_carga', $id_carga)->first();
+    }
 
 
 
